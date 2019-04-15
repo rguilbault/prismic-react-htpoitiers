@@ -17,8 +17,43 @@ a {
 }
 
 .presentation {
+    .presentation__title {
+        text-align: center;
+    }
+
     .presentation__logo img {
         width: 200px;
+    }
+
+    .presentation__container {
+        display: flex;
+
+        .presentation__container--left {
+            margin: 30px 40px 0px 60px;
+            flex-grow: 1;
+
+            ul {
+                list-style-type: none;
+                padding: 0px;
+                
+                li {
+                    text-align: center;
+                    margin-bottom: 0.5em;
+                }
+            }
+        }
+
+        .presentation__container--right {
+            margin-left: 40px;
+            margin-right: 100px;
+            flex-grow: 2;
+        }
+    }
+
+    .presentation__description {
+        li {
+            margin-bottom: 0.5em;
+        }
     }
 }
 

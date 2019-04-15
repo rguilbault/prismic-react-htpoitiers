@@ -8,12 +8,16 @@ class EventList extends Component {
     }
 
     render() {
-        return (
-            <div className="eventList">
-                <h1>Evénements</h1>
-                { this.props.data.map(event => <Event data={event} key={event.id} />) }
-            </div>
-        );
+        if(this.props.data && this.props.data.length > 0) {
+            return (
+                <div className="eventList">
+                    <h1>Evénements</h1>
+                    { this.props.data.map(event => <Event data={event} key={event.id} />) }
+                </div>
+            );
+        } else {
+            return null;
+        }
     }
 }
 
