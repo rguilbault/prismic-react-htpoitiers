@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-import App from './page/app';
+import MainPage from './page/mainPage';
+import EventPage from './page/eventPage';
+
+import '../style/custom.scss';
 
 class AppRouter extends Component {
     constructor(props) {
@@ -12,7 +15,8 @@ class AppRouter extends Component {
         return (
             <BrowserRouter>
                 <div>
-                    <Route exact path="/" component={App} />
+                    <Route exact path="/" component={MainPage} />
+                    <Route exact path="/event/:id" component={EventPage} />
                 </div>
             </BrowserRouter>
         )

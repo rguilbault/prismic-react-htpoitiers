@@ -4,7 +4,7 @@ import Presentation from '../components/presentation';
 import EventList from '../components/eventList';
 import PrismicClient from '../services/prismicClient';
 
-class App extends Component {
+class MainPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -39,4 +39,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default MainPage;

@@ -57,10 +57,20 @@ a {
     }
 }
 
-.eventList__item__location--name {
+.eventList {
+    h1 {
+        text-align: center;
+    }
+
+    .event__link {
+        text-align: center;
+    }
+}
+
+.event__location--name {
     font-weight: bold;
 }
 
-.eventList__item__location--address {
+.event__location--address {
     font-style: italic;
 }

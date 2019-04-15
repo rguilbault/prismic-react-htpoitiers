@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Event from './event';
+import EventLink from './eventLink';
 
 class EventList extends Component {
     constructor(props) {
@@ -12,7 +12,7 @@ class EventList extends Component {
             return (
                 <div className="eventList">
                     <h1>Evénements</h1>
-                    { this.props.data.map(event => <Event data={event} key={event.id} />) }
+                    { this.props.data.map(event => <EventLink data={event} key={event.id} />) }
                 </div>
             );
         } else {
