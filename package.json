@@ -1,0 +1,13 @@
+{
+  "name": "prismic-react-htpoitiers",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:rguilbault/prismic-react-htpoitiers.git",
+  "author": "Ronan Guilbault <ronan.guilbault@serli.com>",
+  "license": "MIT",
+  "dependencies": {
+    "parcel-bundler": "^1.12.3",
+    "react": "^16.0.0",
+    "react-dom": "^16.8.6"
+  }
+}
