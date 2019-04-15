@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { RichText, Link } from 'prismic-reactjs';
+import { RichText } from 'prismic-reactjs';
 
 import Conference from './conference';
 
@@ -23,11 +23,9 @@ class Event extends Component {
                 </p>
                 <div>
                     <h2>Conférences</h2>
-                    {this.props.data && this.props.data.data.conferences.map(doc => {
-                        return (
-                            <Conference key={doc.link.id} id={doc.link.id} />
-                        );
-                    })}
+                    {this.props.data && this.props.data.data.conferences.map(doc => 
+                        <Conference key={doc.link.id} id={doc.link.id} />
+                    )}
                 </div>
             </div>
         )

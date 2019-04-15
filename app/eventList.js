@@ -11,9 +11,7 @@ class EventList extends Component {
         return (
             <div className="eventList">
                 <h1>Evénements</h1>
-                {this.props.data.map(event => {
-                    return (<Event data={event} key={event.id} />)
-                })}
+                { this.props.data.map(event => <Event data={event} key={event.id} />) }
             </div>
         );
     }

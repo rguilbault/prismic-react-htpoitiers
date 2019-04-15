@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { RichText, Link } from 'prismic-reactjs';
+import { RichText } from 'prismic-reactjs';
 
 import PrismicClient from './services/prismicClient';
 
@@ -38,7 +38,7 @@ class Conference extends Component {
                 </div>
             )
         } else {
-            return <p>{this.props.id}</p>;
+            return null;
         }
     }
 }
