@@ -1,0 +1,17 @@
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.leaflet-container {
+    height: 250px;
+    width: 400px;
+    overflow: hidden;
+}
+
+.eventList__item__location--name {
+    font-weight: bold;
+}
+
+.eventList__item__location--address {
+    font-style: italic;
+}
