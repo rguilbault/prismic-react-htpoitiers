@@ -12,7 +12,7 @@ a {
 
 .leaflet-container {
     height: 250px;
-    width: 400px;
+    width: 350px;
     overflow: hidden;
 }
 
@@ -67,10 +67,35 @@ a {
     }
 }
 
-.event__location--name {
-    font-weight: bold;
-}
+.event {
+    .event__title {
+        text-align: center;
+    }
 
-.event__location--address {
-    font-style: italic;
+    .event__container {
+        display: flex;
+
+        .event__container--left {
+            flex-grow: 1;
+            margin: 20px 40px 0px 100px;
+        }
+
+        .event__container--right {
+            flex-grow: 2;
+            margin-left: 40px;
+            margin-right: 100px;
+        }
+    }
+
+    .event__date {
+        margin-bottom: 0.6em;
+    }
+
+    .event__location--name {
+        font-weight: bold;
+    }
+    
+    .event__location--address {
+        font-style: italic;
+    }
 }
