@@ -32,9 +32,7 @@ class App extends Component {
     render() {
         return (
             <Fragment>
-                <h1>Test Prismic</h1>
                 {this.state.prez && <Presentation data={this.state.prez} />}
-                <hr/>
                 <EventList data={this.state.events} />
             </Fragment>
         )

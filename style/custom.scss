@@ -1,11 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto+Slab:700');
+
 body {
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto Slab", serif;
+    color: black;
+    background-color: #fefefe;
+}
+
+a {
+    color: #bc56d6;
 }
 
 .leaflet-container {
     height: 250px;
     width: 400px;
     overflow: hidden;
+}
+
+.presentation {
+    .presentation__logo img {
+        width: 200px;
+    }
 }
 
 .eventList__item__location--name {

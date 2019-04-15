@@ -12,6 +12,9 @@ class Presentation extends Component {
                 <div className="presentation__title">
                     {RichText.render(this.props.data.data.name)}
                 </div>
+                <div className="presentation__logo">
+                    <img src={Link.url(this.props.data.data.logo)} />
+                </div>
                 <div className="presentation__description">
                     {RichText.render(this.props.data.data.description)}
                 </div>
