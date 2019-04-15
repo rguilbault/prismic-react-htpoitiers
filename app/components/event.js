@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { RichText } from 'prismic-reactjs';
-import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 
 import Conference from './conference';
-import '../style/custom.scss';
+import '../../style/custom.scss';
 
 class Event extends Component {
     constructor(props) {
@@ -22,7 +21,7 @@ class Event extends Component {
                 </div>
                 <div className="eventList__item__location">
                     <h3>Lieu</h3>
-                    <Map center={position} zoom={14}>
+                    {/*<Map center={position} zoom={14}>
                         <TileLayer
                             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                             url='http:///maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png'
@@ -33,7 +32,7 @@ class Event extends Component {
                             <span className="eventList__item__location--address">{this.props.data.data.address}</span>
                         </Popup>
                         </Marker>
-                    </Map>
+        </Map>*/}
                 </div>
                 <div>
                     <h2>Conférences</h2>

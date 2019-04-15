@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from 'react';
 
-import Presentation from './presentation';
-import EventList from './eventList';
-import PrismicClient from './services/prismicClient';
+import Presentation from '../components/presentation';
+import EventList from '../components/eventList';
+import PrismicClient from '../services/prismicClient';
 
 class App extends Component {
     constructor(props) {
