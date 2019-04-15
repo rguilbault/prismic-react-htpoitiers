@@ -42,14 +42,14 @@ class App extends Component {
                 <pre>
                     {this.state.prez && JSON.stringify(this.state.prez, null, 2)}
                 </pre>
-                <p>
+                <pre>
                     Evénements :
                     {this.state.events && JSON.stringify(this.state.events, null, 2)}
-                </p>
-                <p>
+                </pre>
+                <pre>
                     Conférences :
                     {this.state.confs && JSON.stringify(this.state.confs, null, 2)}
-                </p>
+                </pre>
             </Fragment>
         )
     }
