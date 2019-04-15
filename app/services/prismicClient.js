@@ -22,6 +22,10 @@ class PrismicClient {
     queryAllByDocumentType(docType) {
         return this.api && this.api.query(Prismic.Predicates.at('document.type', docType));
     }
+
+    queryByDocumentId(docId) {
+        return this.api && this.api.queryFirst(Prismic.Predicates.at('document.id', docId));
+    }
 }
 
 const client = new PrismicClient();

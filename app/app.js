@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 
 import Presentation from './presentation';
+import EventList from './eventList';
 import PrismicClient from './services/prismicClient';
 
 class App extends Component {
@@ -26,11 +27,6 @@ class App extends Component {
                 this.setState({events: response.results})
             }
         });
-        PrismicClient.queryAllByDocumentType('conference').then(response => {
-            if(response) {
-                this.setState({confs: response.results})
-            }
-        });
     }
 
     render() {
@@ -38,14 +34,8 @@ class App extends Component {
             <Fragment>
                 <h1>Test Prismic</h1>
                 {this.state.prez && <Presentation data={this.state.prez} />}
-                <pre>
-                    Evénements :
-                    {this.state.events && JSON.stringify(this.state.events, null, 2)}
-                </pre>
-                <pre>
-                    Conférences :
-                    {this.state.confs && JSON.stringify(this.state.confs, null, 2)}
-                </pre>
+                <hr/>
+                <EventList data={this.state.events} />
             </Fragment>
         )
     }
