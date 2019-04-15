@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import Prismic from 'prismic-javascript';
-import { Link } from 'prismic-reactjs';
+
+import Presentation from './presentation';
 
 class App extends Component {
     constructor(props) {
@@ -37,11 +38,8 @@ class App extends Component {
     render() {
         return (
             <Fragment>
-                <h2>Test Prismic</h2>
-                <h3>Présentation</h3>
-                <pre>
-                    {this.state.prez && JSON.stringify(this.state.prez, null, 2)}
-                </pre>
+                <h1>Test Prismic</h1>
+                {this.state.prez && <Presentation data={this.state.prez} />}
                 <pre>
                     Evénements :
                     {this.state.events && JSON.stringify(this.state.events, null, 2)}
