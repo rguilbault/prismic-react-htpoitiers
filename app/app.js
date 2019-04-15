@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
-import Prismic from 'prismic-javascript';
 
 import Presentation from './presentation';
+import PrismicClient from './services/prismicClient';
 
 class App extends Component {
     constructor(props) {
@@ -13,26 +13,24 @@ class App extends Component {
         };
     }
 
-    componentDidMount() {
-        const apiEndpoint = 'https://htpoitiers-rguilbault.prismic.io/api/v2'
+    async componentDidMount() {
+        await PrismicClient.checkApi();
 
-        Prismic.api(apiEndpoint).then(api => {
-            api.query(Prismic.Predicates.at('document.type', 'presentation')).then(response => {
-                if(response) {
-                    this.setState({prez: response.results[0]})
-                }
-            });
-            api.query(Prismic.Predicates.at('document.type', 'evenement')).then(response => {
-                if(response) {
-                    this.setState({events: response.results})
-                }
-            });
-            api.query(Prismic.Predicates.at('document.type', 'conference')).then(response => {
-                if(response) {
-                    this.setState({confs: response.results})
-                }
-            })
-        })
+        PrismicClient.queryAllByDocumentType('presentation').then(response => {
+            if(response) {
+                this.setState({prez: response.results[0]})
+            }
+        });
+        PrismicClient.queryAllByDocumentType('evenement').then(response => {
+            if(response) {
+                this.setState({events: response.results})
+            }
+        });
+        PrismicClient.queryAllByDocumentType('conference').then(response => {
+            if(response) {
+                this.setState({confs: response.results})
+            }
+        });
     }
 
     render() {
