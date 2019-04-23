@@ -19,8 +19,8 @@ class PrismicClient {
         }));
     }
     
-    queryAllByDocumentType(docType) {
-        return this.api && this.api.query(Prismic.Predicates.at('document.type', docType));
+    queryAllByDocumentType(docType, options) {
+        return this.api && this.api.query(Prismic.Predicates.at('document.type', docType), options);
     }
 
     queryByDocumentId(docId) {

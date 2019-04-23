@@ -17,12 +17,13 @@ class MainPage extends Component {
     async componentDidMount() {
         await PrismicClient.checkApi();
 
-        PrismicClient.queryAllByDocumentType('presentation').then(response => {
+        PrismicClient.queryAllByDocumentType('presentation', {}).then(response => {
             if(response) {
                 this.setState({prez: response.results[0]})
             }
         });
-        PrismicClient.queryAllByDocumentType('evenement').then(response => {
+        PrismicClient.queryAllByDocumentType('evenement', {orderings: '[my.evenement.date desc]', pageSize: 10}).then(response => {
+            console.log(response);
             if(response) {
                 this.setState({events: response.results})
             }

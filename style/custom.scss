@@ -64,7 +64,10 @@ a {
     }
 
     .event__link {
+        font-weight: bold;
+        font-size: 115%;
         text-align: center;
+        padding-bottom: 0.5em;
     }
 }
 
@@ -109,9 +112,7 @@ a {
     }
 
     .event__conferences {
-        h2 {
-            text-align: center;
-        }
+        text-align: center;
     }
 
     .conference__summary {
@@ -134,7 +135,7 @@ a {
 }
 
 .conference {
-    margin: 0px 40px;
+    margin: 0px 40px 40px;
 
     .conference__title {
         text-align: center;
