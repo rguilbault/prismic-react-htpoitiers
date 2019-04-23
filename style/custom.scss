@@ -98,4 +98,28 @@ a {
     .event__location--address {
         font-style: italic;
     }
+
+    .event__conferences {
+        h2 {
+            text-align: center;
+        }
+    }
+
+    .conference__summary {
+        .conference__summary--title {
+            text-align: center;
+            margin-bottom: 0.6em;
+        }
+
+        .conference__summary--name {
+            font-weight: bold;
+            font-size: 115%;
+        }
+
+        .conference__summary--speaker {
+            font-style: italic;
+            font-size: 90%;
+        }
+        
+    }
 }

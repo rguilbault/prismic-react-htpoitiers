@@ -3,7 +3,7 @@ import { RichText, Date as PrismicDate } from 'prismic-reactjs';
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 import moment from 'moment';
 
-import Conference from './conference';
+import ConferenceSummary from './conferenceSummary';
 import '../../style/custom.scss';
 
 class Event extends Component {
@@ -48,10 +48,10 @@ class Event extends Component {
                         </div>
                     </div>
                 </div>
-                <div>
+                <div className="event__conferences">
                     <h2>Conférences</h2>
                     {this.props.data && this.props.data.data.conferences.map(doc => 
-                        <Conference key={doc.link.id} id={doc.link.id} />
+                        <ConferenceSummary key={doc.link.id} id={doc.link.id} />
                     )}
                 </div>
             </div>

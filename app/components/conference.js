@@ -6,34 +6,20 @@ import PrismicClient from '../services/prismicClient';
 class Conference extends Component {
     constructor(props) {
         super(props);
-
-        this.state = {
-            conf: null
-        }
-    }
-
-    async componentDidMount() {
-        await PrismicClient.checkApi();
-
-        PrismicClient.queryByDocumentId(this.props.id).then(response => {
-            if(response) {
-                this.setState({conf: response})
-            }
-        });
     }
 
     render() {
-        if(this.state.conf) {
+        if(this.props.data) {
             return (
                 <div className="conference">
                     <div className="conference__title">
-                        {RichText.render(this.state.conf.data.name)}
+                        {RichText.render(this.props.data.data.name)}
                     </div>
                     <div className="conference__speaker">
-                        Par {this.state.conf.data.speaker}
+                        Par {this.props.data.data.speaker}
                     </div>
                     <div className="conference__description">
-                        {RichText.render(this.state.conf.data.description)}
+                        {RichText.render(this.props.data.data.description)}
                     </div>
                 </div>
             )
