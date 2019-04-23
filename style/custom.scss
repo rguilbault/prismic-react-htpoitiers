@@ -123,3 +123,27 @@ a {
         
     }
 }
+
+.conference {
+    margin: 0px 40px;
+
+    .conference__title {
+        text-align: center;
+    }
+
+    .conference__speaker {
+        font-style: italic;
+    }
+
+    .conference__description--title {
+        font-weight: bold;
+    }
+
+    .conference__description--content {
+        padding: 15px 30px;
+        border: 1px #aaa solid;
+        border-radius: 10px;
+        background-color: #eee;
+
+    }
+}

@@ -29,9 +29,9 @@ class Conference extends Component {
                 <div className="conference__summary">
                     <div className="conference__summary--title">
                         <Link to={"/conference/" + this.state.conf.id}>
-                            <span className="conference__summary--name">{this.state.conf.data.name[0].text}</span><br/>
-                            <span className="conference__summary--speaker">{this.state.conf.data.speaker}</span>
-                        </Link>
+                            <span className="conference__summary--name">{this.state.conf.data.name[0].text}</span>
+                        </Link><br/>
+                        <span className="conference__summary--speaker">{this.state.conf.data.speaker}</span>
                     </div>
                 </div>
             )

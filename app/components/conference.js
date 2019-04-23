@@ -16,10 +16,13 @@ class Conference extends Component {
                         {RichText.render(this.props.data.data.name)}
                     </div>
                     <div className="conference__speaker">
-                        Par {this.props.data.data.speaker}
+                        Speaker : {this.props.data.data.speaker}
                     </div>
                     <div className="conference__description">
-                        {RichText.render(this.props.data.data.description)}
+                        <h3 className="conference__description--title">Abstract</h3>
+                        <div className="conference__description--content">
+                            {RichText.render(this.props.data.data.description)}
+                        </div>
                     </div>
                 </div>
             )
