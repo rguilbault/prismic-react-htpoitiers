@@ -51,7 +51,7 @@ class Event extends Component {
                 <div className="event__conferences">
                     <h2>Conférences</h2>
                     {this.props.data && this.props.data.data.conferences.map(doc => 
-                        <ConferenceSummary key={doc.link.id} id={doc.link.id} />
+                        <ConferenceSummary key={doc.link.id} eventId={this.props.data.id} id={doc.link.id} />
                     )}
                 </div>
             </div>

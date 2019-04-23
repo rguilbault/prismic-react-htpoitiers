@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import PrismicClient from '../services/prismicClient';
 
-class Conference extends Component {
+class ConferenceSummary extends Component {
     constructor(props) {
         super(props);
 
@@ -28,7 +28,7 @@ class Conference extends Component {
             return (
                 <div className="conference__summary">
                     <div className="conference__summary--title">
-                        <Link to={"/conference/" + this.state.conf.id}>
+                        <Link to={"/event/" + this.props.eventId + "/conference/" + this.state.conf.id}>
                             <span className="conference__summary--name">{this.state.conf.data.name[0].text}</span>
                         </Link><br/>
                         <span className="conference__summary--speaker">{this.state.conf.data.speaker}</span>
@@ -41,4 +41,4 @@ class Conference extends Component {
     }
 }
 
-export default Conference;
+export default ConferenceSummary;

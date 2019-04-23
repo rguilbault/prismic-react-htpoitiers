@@ -18,7 +18,7 @@ class AppRouter extends Component {
                 <div>
                     <Route exact path="/" component={MainPage} />
                     <Route exact path="/event/:id" component={EventPage} />
-                    <Route exact path="/conference/:id" component={ConferencePage} />
+                    <Route exact path="/event/:eventId/conference/:confId" component={ConferencePage} />
                 </div>
             </BrowserRouter>
         )

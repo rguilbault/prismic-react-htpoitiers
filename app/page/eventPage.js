@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import { Link } from 'react-router-dom';
 
 import PrismicClient from '../services/prismicClient';
 import Event from '../components/event';
@@ -24,7 +25,14 @@ class EventPage extends Component {
     render() {
         if(this.state.event) {
             return (
-                <Event data={this.state.event} />
+                <div>
+                    <nav className="navbar">
+                        <div>
+                            <Link to={'/'}>Accueil</Link>
+                        </div>
+                    </nav>
+                    <Event data={this.state.event} />
+                </div>
             )
         } else {
             return null;
