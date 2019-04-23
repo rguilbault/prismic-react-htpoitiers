@@ -40,7 +40,7 @@ class Event extends Component {
                             {RichText.render(this.props.data.data.description)}
                         </div>
                         <div className="event__date">
-                            Date : {`${moment(PrismicDate(this.props.data.data.date)).format('MM/DD/YYYY, HH:mm')}`}
+                            Date : {`${moment(PrismicDate(this.props.data.data.date)).format('DD/MM/YYYY, HH:mm')}`}
                         </div> 
                         <div className="event__address">
                             Lieu : <span className="event__location--name">{this.props.data.data.location}</span><br/>
