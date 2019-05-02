@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto+Slab:700');
 
+$link-color: #bc56d6;
+
 body {
     font-family: "Roboto Slab", serif;
     color: black;
@@ -8,7 +10,7 @@ body {
 }
 
 a {
-    color: #bc56d6;
+    color: $link-color;
 }
 
 .leaflet-container {
