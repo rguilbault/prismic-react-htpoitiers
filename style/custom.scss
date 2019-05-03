@@ -78,6 +78,15 @@ a {
         text-align: center;
     }
 
+    .event__tags {
+        text-align: center;
+        font-style: italic;
+
+        @media screen and (max-width: 1000px) {
+            margin-bottom: 0.6em;
+        }
+    }
+
     .event__container {
         display: flex;
 

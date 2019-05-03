@@ -18,6 +18,9 @@ class Event extends Component {
                 <div className="event__title">
                     {RichText.render(this.props.data.data.name)}
                 </div>
+                <div className="event__tags">
+                    {this.props.data.tags.map(value => <span>#{value} </span>)}
+                </div>
                 <div className="event__container">
                     <div className="event__container--left">
                         <div className="event__location">
