@@ -51,6 +51,18 @@ a {
             margin-right: 100px;
             flex-grow: 2;
         }
+
+        @media screen and (max-width: 1000px) {
+            flex-direction: column;
+
+            .presentation__container--left {
+                margin: 20px auto 0px;
+            }
+
+            .presentation__container--right {
+                margin-right: 40px;
+            }
+        }
     }
 
     .presentation__description {
