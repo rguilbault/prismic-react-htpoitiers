@@ -23,7 +23,6 @@ class MainPage extends Component {
             }
         });
         PrismicClient.queryAllByDocumentType('evenement', {orderings: '[my.evenement.date desc]', pageSize: 10}).then(response => {
-            console.log(response);
             if(response) {
                 this.setState({events: response.results})
             }
