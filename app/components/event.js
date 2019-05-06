@@ -19,7 +19,7 @@ class Event extends Component {
                     {RichText.render(this.props.data.data.name)}
                 </div>
                 <div className="event__tags">
-                    {this.props.data.tags.map(value => <span>#{value} </span>)}
+                    {this.props.data.tags.map(value => <span key={value}>#{value} </span>)}
                 </div>
                 <div className="event__container">
                     <div className="event__container--left">
