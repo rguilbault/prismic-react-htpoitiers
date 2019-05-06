@@ -6,6 +6,7 @@
   "author": "Ronan Guilbault <ronan.guilbault@serli.com>",
   "license": "MIT",
   "dependencies": {
+    "js-cookie": "^2.2.0",
     "leaflet": "^1.4.0",
     "moment": "^2.24.0",
     "parcel-bundler": "^1.12.3",

@@ -1,4 +1,5 @@
 import Prismic from 'prismic-javascript';
+import Cookies from 'js-cookie';
 
 class PrismicClient {
     constructor() {
@@ -16,24 +17,38 @@ class PrismicClient {
         this.apiOptions = {};
     }
 
+    linkResolver(doc) {
+        return '/preview/' + doc.id;
+    }
+
     checkApi() {
-        return new Promise((resolve => {
+        return new Promise(resolve => {
             if(this.api === null) {
                 const generalOptions = Object.assign({},
                     this.token ? {accessToken: this.token} : {}
                 );
                 Prismic.api(this.apiEndpoint, generalOptions).then(api => {
                     this.api = api;
-                    const ref = api.refs.filter(ref => ref.label === this.refName);
-                    this.apiOptions = {
-                        ref: ref.length > 0 ? ref[0].ref : api.master()
+                    const previewRef = Cookies.get(this.api.previewCookie);
+                    if(previewRef &&
+                        // Prevent fetch releases when not use preview
+                        (location.pathname.indexOf("preview") > -1 || location.pathname === "/p")
+                        ) {
+                        this.apiOptions = {
+                            ref: previewRef.ref
+                        }
+                    } else {
+                        const ref = api.refs.filter(ref => ref.label === this.refName);
+                        this.apiOptions = {
+                            ref: ref.length > 0 ? ref[0].ref : api.master()
+                        }
                     }
                     resolve();
                 });
             } else {
                 resolve();
             }
-        }));
+        });
     }
     
     queryAllByDocumentType(docType, options) {
@@ -43,6 +58,10 @@ class PrismicClient {
 
     queryByDocumentId(docId) {
         return this.api && this.api.queryFirst(Prismic.Predicates.at('document.id', docId), this.apiOptions);
+    }
+
+    preview(token) {
+        return this.api && this.api.previewSession(token, this.linkResolver);
     }
 }
 

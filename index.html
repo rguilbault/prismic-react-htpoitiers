@@ -6,6 +6,18 @@
     </head>
     <body>
         <div id="app"></div>
+        <script>
+            window.prismic = {
+                endpoint: 'https://htpoitiers-rguilbault.prismic.io/api/v2'
+            };
+        </script>
+        <script>
+            var script = document.createElement('script');
+            if (location.pathname.indexOf("preview") > -1 || location.pathname === "/p") {
+                script.src = 'https://static.cdn.prismic.io/prismic.min.js';
+                document.body.appendChild(script);
+            }
+        </script>
         <script src="app/index.js"></script>
     </body>
 </html>
