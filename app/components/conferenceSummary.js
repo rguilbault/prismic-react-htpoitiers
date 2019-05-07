@@ -13,7 +13,7 @@ class ConferenceSummary extends Component {
             return (
                 <div className="conference__summary">
                     <div className="conference__summary--title">
-                        <Link to={"/event/" + this.props.eventId + "/conference/" + this.props.conf.id}>
+                        <Link to={"/conference/" + this.props.conf.id}>
                             <span className="conference__summary--name">{this.props.conf.data.name[0].text}</span>
                         </Link><br/>
                         <span className="conference__summary--speaker">{this.props.conf.data.speaker}</span>

@@ -23,7 +23,7 @@ class AppRouter extends Component {
                     <Route exact path="/p" component={PreviewPage} />
                     <Route exact path="/preview/:id" component={Preview2Page} />
                     <Route exact path="/event/:id" component={EventPage} />
-                    <Route exact path="/event/:eventId/conference/:confId" component={ConferencePage} />
+                    <Route exact path="/conference/:confId" component={ConferencePage} />
                     <Route component={NotFoundPage} />
                 </Switch>
             </BrowserRouter>
