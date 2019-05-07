@@ -60,6 +60,11 @@ class PrismicClient {
         return this.api && this.api.queryFirst(Prismic.Predicates.at('document.id', docId), this.apiOptions);
     }
 
+    queryAllByDocumentIds(docIds, options) {
+        const allOptions = Object.assign({}, this.apiOptions, options);
+        return this.api && this.api.query(Prismic.Predicates.any('document.id', docIds), allOptions);
+    }
+
     preview(token) {
         return this.api && this.api.previewSession(token, this.linkResolver);
     }

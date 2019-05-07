@@ -9,8 +9,7 @@ class MainPage extends Component {
         super(props);
         this.state = {
             prez: null,
-            events: [],
-            confs: []
+            events: []
         };
     }
 
