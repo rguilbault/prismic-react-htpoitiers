@@ -1,6 +1,5 @@
-import React, { Component, Fragment } from 'react';
+import { Component } from 'react';
 import qs from 'qs';
-import Cookies from 'js-cookie';
 
 import PrismicClient from '../services/prismicClient';
 

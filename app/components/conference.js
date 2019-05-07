@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { RichText } from 'prismic-reactjs';
 
-import PrismicClient from '../services/prismicClient';
-
 class Conference extends Component {
     constructor(props) {
         super(props);

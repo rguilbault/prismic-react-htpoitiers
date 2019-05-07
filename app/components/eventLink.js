@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { RichText } from 'prismic-reactjs';
 import { Link } from 'react-router-dom';
 
 class EventLink extends Component {
