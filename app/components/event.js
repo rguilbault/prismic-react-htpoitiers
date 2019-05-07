@@ -26,8 +26,8 @@ class Event extends Component {
                         <div className="event__location">
                             <Map center={position} zoom={14}>
                                 <TileLayer
-                                    attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                                    url='http:///maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png'
+                                    attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
+                                    url='https:///maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png'
                                 />
                                 <Marker position={position}>
                                     <Popup>
