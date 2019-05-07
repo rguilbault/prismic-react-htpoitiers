@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Prismic from 'prismic-javascript';
 
@@ -34,7 +34,7 @@ class ConferencePage extends Component {
     }
 
     render() {
-        let eventLink = null;
+        let eventLink = <div>..</div>;
         if(this.state.event) {
             eventLink = <div><Link to={'/event/' + this.state.event.id}>Retour à l'évènement</Link></div>;
         }
