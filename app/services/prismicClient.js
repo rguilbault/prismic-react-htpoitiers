@@ -18,7 +18,16 @@ class PrismicClient {
     }
 
     linkResolver(doc) {
-        return '/preview/' + doc.id;
+        switch(doc.type) {
+            case 'evenement':
+                return '/event/' + doc.id;
+            case 'conference':
+                return '/conference/' + doc.id;
+            case 'presentation':
+                return '/';
+            default:
+                return '/404';
+        }
     }
 
     checkApi() {
@@ -32,7 +41,7 @@ class PrismicClient {
                     const previewRef = Cookies.get(this.api.previewCookie);
                     if(previewRef &&
                         // Prevent fetch releases when not use preview
-                        (location.pathname.indexOf("preview") > -1 || location.pathname === "/p")
+                        (location.pathname === "/p")
                         ) {
                         this.apiOptions = {
                             ref: previewRef.ref
