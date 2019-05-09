@@ -12,8 +12,8 @@
             };
         </script>
         <script>
-            var script = document.createElement('script');
             if (location.pathname === "/p") {
+                var script = document.createElement('script');
                 script.src = 'https://static.cdn.prismic.io/prismic.min.js';
                 document.body.appendChild(script);
             }
