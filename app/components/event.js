@@ -3,7 +3,6 @@ import { RichText, Date as PrismicDate } from 'prismic-reactjs';
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 import moment from 'moment';
 
-import ConferenceSummary from './conferenceSummary';
 import '../../style/custom.scss';
 
 class Event extends Component {
