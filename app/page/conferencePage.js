@@ -4,6 +4,7 @@ import Prismic from 'prismic-javascript';
 
 import PrismicClient from '../services/prismicClient';
 import Conference from '../components/conference';
+import NotFoundPage from './notFoundPage';
 
 class ConferencePage extends Component {
     constructor(props) {
@@ -11,6 +12,7 @@ class ConferencePage extends Component {
         this.state = {
             conference: null,
             event: null,
+            loading: true,
         };
     }
 
@@ -19,7 +21,9 @@ class ConferencePage extends Component {
 
         PrismicClient.queryByDocumentId(this.props.match.params.confId).then(response => {
             if(response) {
-                this.setState({conference: response})
+                this.setState({conference: response, loading: false})
+            } else {
+                this.setState({loading: false});
             }
         });
 
@@ -38,18 +42,22 @@ class ConferencePage extends Component {
         if(this.state.event) {
             eventLink = <div><Link to={'/event/' + this.state.event.id}>Retour à l'évènement</Link></div>;
         }
-        if(this.state.conference) {
-            return (
-                <div>
-                    <nav className="navbar">
-                        <div><Link to={'/'}>Accueil</Link></div>
-                        {eventLink}
-                    </nav>
-                    <Conference data={this.state.conference} />
-                </div>
-            )
-        } else {
+        if(this.state.loading) {
             return null;
+        } else {
+            if(this.state.conference) {
+                return (
+                    <div>
+                        <nav className="navbar">
+                            <div><Link to={'/'}>Accueil</Link></div>
+                            {eventLink}
+                        </nav>
+                        <Conference data={this.state.conference} />
+                    </div>
+                )
+            } else {
+                return <NotFoundPage />;
+            }
         }
     }
 }
