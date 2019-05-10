@@ -9,6 +9,20 @@ body {
     margin: 0px;
 }
 
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    a {
+        overflow-wrap: break-word;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+
 a {
     color: $link-color;
 }
@@ -56,11 +70,17 @@ a {
             flex-direction: column;
 
             .presentation__container--left {
-                margin: 20px auto 0px;
+                margin: 20px 0px 0px;
+
+                .presentation__logo {
+                    text-align: center;
+                    margin: 0px auto;
+                }
             }
 
             .presentation__container--right {
-                margin-right: 40px;
+                margin-left: 4%;
+                margin-right: 4%;
             }
         }
     }
@@ -88,6 +108,7 @@ a {
 .event {
     .event__title {
         text-align: center;
+        padding: 0px 5%;
     }
 
     .event__tags {
@@ -119,6 +140,11 @@ a {
             .event__container--left {
                 margin: 0px auto;
             }
+
+            .event__container--right {
+                margin-left: 4%;
+                margin-right: 4%;
+            }
         }
     }
 
@@ -142,6 +168,7 @@ a {
         .conference__summary--title {
             text-align: center;
             margin-bottom: 0.6em;
+            padding: 0px 5%;
         }
 
         .conference__summary--name {
@@ -172,12 +199,19 @@ a {
         font-weight: bold;
     }
 
+    @media screen and (max-width: 1000px) {
+        .conference__speaker {
+            text-align: center;
+        }
+
+        margin: 0px 4% 1em;
+    }
+
     .conference__description--content {
         padding: 15px 30px;
         border: 1px #aaa solid;
         border-radius: 10px;
         background-color: #eee;
-
     }
 }
 
