@@ -18,7 +18,12 @@ class PreviewPage extends Component {
         PrismicClient.preview(params.token).then(response => {
             if(response) {
                 this.props.history.push(response);
+            } else {
+                this.props.history.push('/404');
             }
+        }).catch(error => {
+            console.error("Error with preview /", error);
+            this.props.history.push('/404');
         });
     }
 
