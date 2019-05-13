@@ -13,7 +13,7 @@ class Event extends Component {
     render() {
         const position = [this.props.data.data.gps.latitude, this.props.data.data.gps.longitude];
         return (
-            <div className="event">
+            <div className="event" data-wio-id={this.props.data.id}>
                 <div className="event__title">
                     {RichText.render(this.props.data.data.name)}
                 </div>

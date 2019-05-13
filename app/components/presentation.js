@@ -8,7 +8,7 @@ class Presentation extends Component {
 
     render() {
         return (
-            <div className="presentation">
+            <div className="presentation" data-wio-id={this.props.data.id}>
                 <div className="presentation__title">
                     {RichText.render(this.props.data.data.name)}
                 </div>

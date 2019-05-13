@@ -281,3 +281,29 @@ div[data-oembed] {
 .notFound {
     text-align: center;
 }
+
+.conference,
+.event,
+.presentation {
+    position: relative;
+}
+
+.conference .wio-link {
+    top: 0px;
+    right: 0px;
+}
+
+.event .wio-link,
+.presentation .wio-link  {
+    top: 0px;
+    right: 20px;
+}
+
+.wio-link {
+    position: absolute;
+    padding: 0px 10px;
+    vertical-align: middle;
+    border-radius: 5em;
+    border: 3px #800080 solid;
+    background-color: #fefefe;
+}

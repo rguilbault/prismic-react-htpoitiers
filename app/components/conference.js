@@ -9,7 +9,7 @@ class Conference extends Component {
     render() {
         if(this.props.data) {
             return (
-                <div className="conference">
+                <div className="conference" data-wio-id={this.props.data.id}>
                     <div className="conference__title">
                         {RichText.render(this.props.data.data.name)}
                     </div>
