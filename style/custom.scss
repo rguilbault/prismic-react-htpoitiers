@@ -197,10 +197,15 @@ a {
 
     .conference__description--title {
         font-weight: bold;
+        text-align: left;
     }
 
     @media screen and (max-width: 1000px) {
         .conference__speaker {
+            text-align: center;
+        }
+
+        .conference__description--title {
             text-align: center;
         }
 
